@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Haggle:</strong>
+  <%= @offer.haggle %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @offer.type %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @offer.price %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @offer.quantity %>
+</p>
+
+<p>
+  <strong>Meet you:</strong>
+  <%= @offer.meet_you %>
+</p>
+
+<p>
+  <strong>Meet me:</strong>
+  <%= @offer.meet_me %>
+</p>
+
+<p>
+  <strong>Meet half:</strong>
+  <%= @offer.meet_half %>
+</p>
+
+<p>
+  <strong>Ship you:</strong>
+  <%= @offer.ship_you %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @offer.from %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @offer.to %>
+</p>
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

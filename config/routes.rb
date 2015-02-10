@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+
+
+  resources :commodities do
+    resources :haggles do
+      resources :offers
+    end
+  end
+
+  root 'commodities#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

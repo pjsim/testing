@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Commodity:</strong>
+  <%= @haggle.commodity %>
+</p>
+
+<p>
+  <strong>Open:</strong>
+  <%= @haggle.open %>
+</p>
+
+<%= link_to 'Edit', edit_haggle_path(@haggle) %> |
+<%= link_to 'Back', haggles_path %>

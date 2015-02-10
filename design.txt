@@ -1,0 +1,67 @@
+offer has message field but maybe split this up into seperate MailerGem model?
+
+STORE
+  has many COMMODITIES
+  has a SUPPLY CHAIN
+    has many STORES
+
+COMMODITY
+  description
+  quantity in stock
+  has many HAGGLES
+    belongs to COMMODITY
+    price history
+    open/close
+    has many OFFER
+      belongs to HAGGLE
+      type: initial, counter, accepted
+      price
+      quantity on offer
+      I will meet -> at you, at me, at halfway
+      I will ship, I will pickup
+      from, to
+
+
+COMMON
+-------
+OFFER
+  type: initial, counter, accepted
+  price
+  quantity on offer
+  I will meet -> at you, at me, at halfway
+  I will ship, I will pickup
+  from, to
+
+HAGGLE
+  price history
+  potentially all counters are under this tree
+  open/close
+
+SELLER
+-------
+COMMODITY
+  description
+  has many offers/haggles
+  quantity of commodity
+
+STORE
+  has many commodities
+  # supply chain from different stores
+
+SUPPLY_CHAIN
+  has many stores
+  belongs to a store
+
+
+# initial offer is optional if not aware of price
+# situation 1
+Seller creates a Commodity
+Commodity has initial Offer
+
+Buyer sees initial Offer for Commodity
+Buyer creates counter Offer
+
+Seller sees counter Offer
+Seller accepts counter Offer
+
+Seller closes the haggle and makes a review for user

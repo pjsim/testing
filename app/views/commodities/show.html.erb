@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @commodity.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @commodity.description %>
+</p>
+
+<p>
+  <strong>Stock quantity:</strong>
+  <%= @commodity.stock_quantity %>
+</p>
+
+<p>
+  <strong>Quantity units:</strong>
+  <%= @commodity.quantity_units %>
+</p>
+
+<%= link_to 'Edit', edit_commodity_path(@commodity) %> |
+<%= link_to 'Back', commodities_path %>

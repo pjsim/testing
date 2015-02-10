@@ -1,0 +1,24 @@
+No sales just best prices determined by us and ratings
+
+As a seller I want to haggle a price so that I can get the highest price.
+
+As a seller I want to see offers so I can see what my item is worth if I don't know.
+
+As a buyer I want to make offers and haggle a price so that I can get the lowest price.
+
+As a buyer and a seller I want to see where I am and where he is so that we can meet somewhere convenient.
+
+Seller makes initial offer so use enums
+:initial, :buyer :seller offer counter sale
+Offer from
+Offer to
+
+Offer and counter offer
+Price
+Quantity
+I will come to you
+You must come to me
+We can organize a convenient place such as ....
+
+As a seller I want to easily set up a store so that I can sell multiple items
+As a buyer I want to watch my favorite store so that I can see sales

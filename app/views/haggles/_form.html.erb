@@ -1,0 +1,25 @@
+<%= form_for(@haggle) do |f| %>
+  <% if @haggle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@haggle.errors.count, "error") %> prohibited this haggle from being saved:</h2>
+
+      <ul>
+      <% @haggle.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :commodity_id %><br>
+    <%= f.text_field :commodity_id %>
+  </div>
+  <div class="field">
+    <%= f.label :open %><br>
+    <%= f.check_box :open %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
