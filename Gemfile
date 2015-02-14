@@ -36,6 +36,7 @@ end
 # http://awesome-ruby.com/#awesome-ruby-scientific
 # squeel
 # pry and pry bloodline
+# Mailerbox
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

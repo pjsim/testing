@@ -1,0 +1,11 @@
+
+Use multiple rails pages till it can done in less pages in volt
+
+Buyers searches for item he wants, then selects it (Volt View)
+Go to Item page, volt views of different details, buyer makes offer (1 volt page combining the commodity show and offer/haggle create)
+Redirect back to home page with flash youve made an offer
+
+New offer auto creates a Mailerbox message (any message in offerform is added here as well)
+
+User sees received offers and makes counteroffers in the one view, redirect to my_offers page on counteroffer submit with flash
+

@@ -22,3 +22,7 @@ We can organize a convenient place such as ....
 
 As a seller I want to easily set up a store so that I can sell multiple items
 As a buyer I want to watch my favorite store so that I can see sales
+
+
+
+Use Gitflow!!
