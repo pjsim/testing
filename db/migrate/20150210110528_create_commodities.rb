@@ -1,7 +1,7 @@
 class CreateCommodities < ActiveRecord::Migration
   def change
     create_table :commodities do |t|
-      t.string :title
+      t.string :title, null: false
       t.text :description
       t.float :stock_quantity
       t.string :quantity_units

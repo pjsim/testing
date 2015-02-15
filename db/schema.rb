@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150210111724) do
+ActiveRecord::Schema.define(version: 20150210110955) do
 
   create_table "commodities", force: true do |t|
-    t.string   "title"
+    t.string   "title",          null: false
     t.text     "description"
     t.float    "stock_quantity"
     t.string   "quantity_units"
@@ -23,8 +23,10 @@ ActiveRecord::Schema.define(version: 20150210111724) do
   end
 
   create_table "haggles", force: true do |t|
-    t.integer  "commodity_id"
-    t.boolean  "open"
+    t.integer  "commodity_id",                null: false
+    t.boolean  "open",         default: true, null: false
+    t.integer  "seller",                      null: false
+    t.integer  "buyer",                       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,19 +34,16 @@ ActiveRecord::Schema.define(version: 20150210111724) do
   add_index "haggles", ["commodity_id"], name: "index_haggles_on_commodity_id"
 
   create_table "offers", force: true do |t|
-    t.integer  "haggle_id"
-    t.integer  "type"
+    t.integer  "haggle_id",              null: false
+    t.integer  "intention",  default: 1, null: false
     t.decimal  "price"
     t.float    "quantity"
     t.boolean  "meet_you"
     t.boolean  "meet_me"
     t.boolean  "meet_half"
     t.boolean  "ship_you"
-    t.integer  "from"
-    t.integer  "to"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "message"
   end
 
   add_index "offers", ["haggle_id"], name: "index_offers_on_haggle_id"

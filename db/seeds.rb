@@ -14,10 +14,10 @@ commodities = Commodity.create([
   { title: 'Grapes', description: 'It\'s an grapes' }
 ])
 
-haggles = Haggle.create([
-  { open: true, commodity: Commodity.first }
-])
+# haggles = Haggle.create([
+  # { open: true, commodity: Commodity.first }
+# ])
 
-offers = Offer.create([
-  { haggle: Haggle.first, price: 10, meet_me: true }
-])
+# offers = Offer.create([
+  # { haggle: Haggle.first, price: 10, meet_me: true }
+# ])

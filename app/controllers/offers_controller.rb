@@ -25,7 +25,7 @@ class OffersController < ApplicationController
   # POST /offers.json
   def create
     @offer = Offer.new(offer_params)
-    haggle = Haggle.create(commodity_id: params[:commodity_id])
+    haggle = Haggle.create(commodity_id: params[:commodity_id], seller: 0, buyer: 1)
     @offer.haggle = haggle
     respond_to do |format|
       if @offer.save
@@ -70,6 +70,6 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:haggle_id, :type, :price, :quantity, :meet_you, :meet_me, :meet_half, :ship_you, :from, :to)
+      params.require(:offer).permit(:price, :quantity, :meet_you, :meet_me, :meet_half, :ship_you, :from, :to)
     end
 end
