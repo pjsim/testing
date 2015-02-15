@@ -14,14 +14,9 @@
       <tr>
         <td><%= haggle.commodity %></td>
         <td><%= haggle.open %></td>
-        <td><%= link_to 'Show', haggle %></td>
-        <td><%= link_to 'Edit', edit_haggle_path(haggle) %></td>
-        <td><%= link_to 'Destroy', haggle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Haggle', new_haggle_path %>

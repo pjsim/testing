@@ -28,7 +28,7 @@ class HagglesController < ApplicationController
 
     respond_to do |format|
       if @haggle.save
-        format.html { redirect_to @haggle, notice: 'Haggle was successfully created.' }
+        format.html { redirect_to [Commodity.find(params[:commodity_id]), @haggle], notice: 'Haggle was successfully created.' }
         format.json { render :show, status: :created, location: @haggle }
       else
         format.html { render :new }

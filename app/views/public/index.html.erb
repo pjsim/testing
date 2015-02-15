@@ -1,1 +1,6 @@
-<h1>Welcome to $APP_NAME</h1>
+<h1>LOGO</h1>
+<hr>
+<h3>Commodities</h3>
+<% Commodity.all.each do |com| %>
+  <%= link_to com.title, commodity_path(com) %>
+<% end %>

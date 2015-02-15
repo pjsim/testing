@@ -1,4 +1,5 @@
-<%= form_for(@offer) do |f| %>
+<%= form_for([Commodity.find(params[:commodity_id]), @offer]) do |f| %>
+  <%# <% @commodity = Commodity.find(params[:commodity_id]) %> 
   <% if @offer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@offer.errors.count, "error") %> prohibited this offer from being saved:</h2>
@@ -11,22 +12,22 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :haggle_id %><br>
-    <%= f.text_field :haggle_id %>
-  </div>
-  <div class="field">
-    <%= f.label :type %><br>
-    <%= f.number_field :type %>
-  </div>
+  <%# <div class="field"> %>
+    <%# <%= f.label :haggle_id %><br> %>
+    <%# <%= f.text_field :haggle_id %> %>
+  <%# </div> %>
+  <%# <div class="field"> %>
+    <%# <%= f.label :type %><br> %>
+    <%# <%= f.number_field :type %> %>
+  <%# </div> %>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
   </div>
-  <div class="field">
-    <%= f.label :quantity %><br>
-    <%= f.text_field :quantity %>
-  </div>
+  <%# <div class="field"> %>
+    <%# <%= f.label :quantity %><br> %>
+    <%# <%= f.text_field :quantity %> %>
+  <%# </div> %>
   <div class="field">
     <%= f.label :meet_you %><br>
     <%= f.check_box :meet_you %>
@@ -43,14 +44,14 @@
     <%= f.label :ship_you %><br>
     <%= f.check_box :ship_you %>
   </div>
-  <div class="field">
-    <%= f.label :from %><br>
-    <%= f.number_field :from %>
-  </div>
-  <div class="field">
-    <%= f.label :to %><br>
-    <%= f.number_field :to %>
-  </div>
+  <%# <div class="field"> %>
+    <%# <%= f.label :from %><br> %>
+    <%# <%= f.number_field :from %> %>
+  <%# </div> %>
+  <%# <div class="field"> %>
+    <%# <%= f.label :to %><br> %>
+    <%# <%= f.number_field :to %> %>
+  <%# </div> %>
   <div class="actions">
     <%= f.submit %>
   </div>
